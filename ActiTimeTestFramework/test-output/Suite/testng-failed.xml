@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="testPackage.TestActiTimeLogout">
+        <methods>
+          <include name="testActiTimeLogout"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testPackage.TestActiTimeLogout -->
+      <class name="testPackage.TestActiTimeInvalidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="actiTimeInvalidLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testPackage.TestActiTimeInvalidLogin -->
+      <class name="testPackage.TestActiTimeValidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="testActiTimeValidLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testPackage.TestActiTimeValidLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
