@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testPackage.TestActiTimeInvalidLogin">
+      <class name="testPackage.TestActiTimeValidLogin">
         <methods>
           <include name="setUp"/>
-          <include name="actiTimeInvalidLogin"/>
+          <include name="testActiTimeValidLogin"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testPackage.TestActiTimeInvalidLogin -->
+      </class> <!-- testPackage.TestActiTimeValidLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -29,7 +29,7 @@ public class TestActiTimeValidLogin extends BaseTest {
 		lp.actitimeValidLogin(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 		String actualHomePageTitle = WebDriverCommonLib.getTheTitleOfTheWebPage("current");
 		Assert.assertEquals(actualHomePageTitle, "actiTIME - Enter Time-Track");
-		// hard assert 
+		
 		
 		
 		HomePage hp = new HomePage(driver);
