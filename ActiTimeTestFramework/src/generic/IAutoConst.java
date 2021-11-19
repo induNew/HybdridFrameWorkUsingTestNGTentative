@@ -1,7 +1,7 @@
 package generic;
 
 public interface IAutoConst {
-	
+	//this interface is implemented by BaseTest and this interface has the The constants which never changes
 	String PROP_PATH="./data/config.properties";
 	String EXCEL_PATH="./data/ActiTimeTestdata.xlsx";
 	

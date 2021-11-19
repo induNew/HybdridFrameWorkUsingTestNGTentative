@@ -14,6 +14,8 @@ public class LoginPage {
 	@FindBy(name="pwd") private WebElement pass;
 	@FindBy(id="loginButton") private WebElement loginBtn;
 	@FindBy(xpath="//img[contains(@src,'timer')]") private WebElement logo;
+	@FindBy(xpath = "//span[contains(.,'invalid')]")private WebElement errMsg;
+
 
 
 	//Initialization
@@ -43,6 +45,12 @@ public class LoginPage {
 	public WebElement getLogo() {
 		return logo;
 	}
+	
+
+	public WebElement getErrMsg() {
+		return errMsg;
+	}
+
 	
 	
 	//generic reusable method

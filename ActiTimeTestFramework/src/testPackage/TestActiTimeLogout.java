@@ -11,7 +11,7 @@ import pagePackage.LoginPage;
 
 public class TestActiTimeLogout extends BaseTest{
 	
-	
+	//to test the logout feature
 	
 	@Test
 	public void testActiTimeLogout() throws InterruptedException, IOException

@@ -9,10 +9,13 @@ public class HomePage {
 	
 	//declaration
 	@FindBy(xpath="//a[.='Logout']") private WebElement logout;
+	@FindBy(xpath="//td[.='Enter Time-Track']") private WebElement EnterTimeTrack;
 
 
 	
 	
+
+
 	//Initialization
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -30,6 +33,12 @@ public class HomePage {
 		Thread.sleep(2000);
 		logout.click();
 	}
+	
+
+	public WebElement getEnterTimeTrack() {
+		return EnterTimeTrack;
+	}
+
 	
 	
 

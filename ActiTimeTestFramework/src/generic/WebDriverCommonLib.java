@@ -14,17 +14,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
-
+//This class has so many operational methods that we need to make our test script lightWeight and we achieve a method driven approach and the Abstraction
 public class WebDriverCommonLib extends BaseTest{
 
-	public String getTheTitleOfTheWebPage(String pageName)
+	//to get the title of the webpage
+	public static String getTheTitleOfTheWebPage(String pageName)
 	{
 		String titleOfTheWebPage = driver.getTitle();
 		System.out.println("the title of the "+pageName+" page is "+titleOfTheWebPage+"");
 		return titleOfTheWebPage;
 	}
 
-	public void verifyTheTitle(String expectedTitle,String pageName)
+	//to verify the title of the webpage
+	public static void verifyTheTitle(String expectedTitle,String pageName)
 	{
 		String actualtitleOfThWebPage = driver.getTitle();
 		if(actualtitleOfThWebPage.equals(expectedTitle))
@@ -38,25 +40,21 @@ public class WebDriverCommonLib extends BaseTest{
 		}
 	}
 
+	//implicitly wait
 	public void waitForTheWebELement()
 	{
 		driver.manage().timeouts().implicitlyWait(ITO, TimeUnit.SECONDS);
 	}
 
+	
+	//maximize the Browser
 	public void maximizeTheBrowser()
 	{
 		driver.manage().window().maximize();
 	}
 	
-	public void takeTheScreenShotOfTheWebPage(String fileName) throws IOException
-	{
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File(SCREENSHOT_PATH+fileName+".png");
-		Files.copy(src, dest);
-	}
 	
-	
+
 	//overloaded methods
 	//________________________________________________________________
 	public void selectTheOption(WebElement element,int index)
@@ -100,11 +98,14 @@ public class WebDriverCommonLib extends BaseTest{
 	}
 	//_____________________________________________________________
 	
+	//ExplicitlyWait
 	public void waitForThePageToLoad(String text,int time)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.titleContains(text));
 	}
+	
+	
 	
 	public void getAllTheOptionsOfDropdown(WebElement element)
 	{
@@ -119,7 +120,7 @@ public class WebDriverCommonLib extends BaseTest{
 		
 	}
 	
-	
+	//Action Clas Methods
 	public void mouseHover(WebElement target)
 	{
 		Actions act = new Actions(driver);

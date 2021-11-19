@@ -23,7 +23,7 @@ public class TestActiTimeOptionOfDropdown  extends BaseTest{
 		lp.actitimeValidLogin(flib.readPropertyData(PROP_PATH, "username"), flib.readPropertyData(PROP_PATH, "password"));
 	
 		SettingsPage sp = new SettingsPage(driver);
-		sp.clickOnSettings();
+		sp.clickOnSettings();//click on settings link
 		WebElement drop1 = sp.getDropdown1();
 		WebElement drop2 = sp.getDropdown2();
 		WebElement drop3 = sp.getDropdown3();
